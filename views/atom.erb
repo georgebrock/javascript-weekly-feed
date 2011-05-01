@@ -1,0 +1,25 @@
+<feed xmlns="http://www.w3.org/2005/Atom"> 
+  <title>JavaScript Weekly</title>
+  <id>http://javascriptweekly.com/</id>
+  <updated><%= issue_publication_date(latest_issue) %></updated>
+
+  <link href="<%= request.host %>/atom.xml" rel="self" />
+  <link href="<%= request.host %>" />
+  <link href="http://javascriptweekly.com/" />
+
+  <author>
+    <name>Peter Cooper</name>
+    <uri>http://peterc.org</uri>
+  </author>
+
+<% (first_relevant_issue..latest_issue).to_a.reverse.each do |number| %>
+  <entry>
+    <title>JavaScript Weekly Issue #<%= number %></title>
+    <id><%= issue_url number %></id>
+    <updated><%= issue_publication_date(number) %></updated>
+    <link rel="alternate" type="text/html" href="<%= issue_url number %>" />
+    <content type="html"><%= issue_content(number) %></content>
+  </entry>
+
+<% end %>
+</feed>

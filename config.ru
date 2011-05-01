@@ -1,0 +1,2 @@
+require 'javascript_weekly_to_rss'
+run JavascriptWeeklyToRss
