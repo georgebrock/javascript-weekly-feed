@@ -62,7 +62,11 @@ class JavascriptWeeklyToRss < Sinatra::Base
   end
 
   get '/atom.xml' do
+    etag 'jsw_%d' % issues.first.number
+
     content_type 'application/atom+xml'
+    last_modified issues.first.last_modified
+    cache_control :public, :max_age => 86400
     erb :atom
   end
 
