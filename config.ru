@@ -1,2 +1,2 @@
-require 'javascript_weekly_to_rss'
-run JavascriptWeeklyToRss
+require 'javascript_weekly_to_atom'
+run JavascriptWeeklyToAtom

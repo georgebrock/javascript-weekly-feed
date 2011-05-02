@@ -55,7 +55,7 @@ protected
 
 end
 
-class JavascriptWeeklyToRss < Sinatra::Base
+class JavascriptWeeklyToAtom < Sinatra::Base
 
   get '/' do
     erb :index
