@@ -1,11 +1,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom"> 
-  <title>JavaScript Weekly</title>
-  <id>http://javascriptweekly.com/</id>
+  <title><%= type.capitalize %> Weekly</title>
+  <id>http://<%= type %>weekly.com/</id>
   <updated><%= issues.first.last_modified %></updated>
 
   <link href="http://<%= request.host %>/atom.xml" rel="self" />
   <link href="http://<%= request.host %>" />
-  <link href="http://javascriptweekly.com/" />
+  <link href="http://<%= type %>weekly.com/" />
 
   <author>
     <name>Peter Cooper</name>
@@ -14,7 +14,7 @@
 
 <% issues.each do |issue| %>
   <entry>
-    <title>JavaScript Weekly Issue #<%= issue.number %></title>
+    <title><%= type.capitalize %> Weekly Issue #<%= issue.number %></title>
     <id><%= issue.url %></id>
     <updated><%= issue.last_modified %></updated>
     <link rel="alternate" type="text/html" href="<%= issue.url %>" />

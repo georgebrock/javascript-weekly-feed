@@ -2,8 +2,9 @@
 <html lang='en'>
   <head>
     <meta charset='utf-8'>
-    <title>JavaScript Weekly Atom Feed</title>
-    <link rel='alternate' type='application/atom+xml' href='/atom.xml'>
+    <title>JavaScript Weekly &amp; Ruby Weekly atom feeds</title>
+    <link rel='alternate' type='application/atom+xml' href='/feeds/javascript.xml' title='JavaScript Weekly'>
+    <link rel='alternate' type='application/atom+xml' href='/feeds/ruby.xml' title='Ruby Weekly'>
     <style>
       body {
         margin:           0 auto;
@@ -21,10 +22,19 @@
       a:active {
         text-decoration:  underline;
       }
+      ul {
+        margin:           20px 0;
+        padding:          0;
+        list-style:       none;
+      }
+      li {
+        display:          inline;
+        margin:           0 10px 0 0;
+      }
       a.feed {
         font-size:        1.5em;
-        display:          block;
-        width:            8em;
+        display:          inline-block;
+        width:            15em;
         margin:           0 auto;
         padding:          10px 0;
         text-align:       center;
@@ -48,16 +58,20 @@
     </style>
   </head>
   <body>
-    <h1>JavaScript Weekly Atom Feed</h1>
+    <h1>JavaScript Weekly &amp; Ruby Weekly atom feeds</h1>
     <p>
-      <a href='http://javascriptweekly.com/'>JavaScript Weekly</a> is a very useful newsletter
+      <a href='http://javascriptweekly.com/'>JavaScript Weekly</a> and
+      <a href='http://rubyweekly.com/'>Ruby Weekly</a> are very useful newsletters
       curated by <span class='vcard'><a href='http://peterc.org' class='fn url'>Peter Cooper</a>.
     </p>
     <p>
       I’m a big fan of the content, but not of the delivery mechanism. Maybe I’m old fashioned
-      but I like my news to show up in Google Reader instead of email. So I made this Atom feed…
+      but I like my news to show up in Google Reader instead of email. So I made these Atom feeds…
     </p>
-    <a class='feed' href='/atom.xml'>Get the feed</a>
+    <ul>
+      <li><a class='feed' href='/feeds/javascript.xml'>JavaScript Weekly feed</a></li>
+      <li><a class='feed' href='/feeds/ruby.xml'>Ruby Weekly feed</a></li>
+    </ul>
     <footer>
       Built by <span class='vcard'><a href='http://georgebrock.com'>George Brocklehurst</a></span>
     </footer>
