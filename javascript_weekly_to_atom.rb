@@ -11,7 +11,8 @@ class Weekly
 
   URLS = {
     'javascript' => 'http://javascriptweekly.com/archive/',
-    'ruby' => 'http://rubyweekly.com/archive/'
+    'ruby' => 'http://rubyweekly.com/archive/',
+    'postgres' => 'http://postgresweekly.com/archive/'
   }
 
   # Returns an instance for a given type.
@@ -118,7 +119,7 @@ class WeeklyToAtom < Sinatra::Base
     def issues(type)
       @issues ||= (
         last_number = Weekly.get(type).latest_issue_number
-        first_number = last_number - 10
+        first_number = [last_number - 10, 1].max
         (first_number..last_number).to_a.reverse.map{|n| Weekly.get(type).issue(n) }
       )
     end
