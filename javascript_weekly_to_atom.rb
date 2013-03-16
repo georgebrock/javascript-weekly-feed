@@ -11,7 +11,8 @@ class Weekly
 
   URLS = {
     'javascript' => 'http://javascriptweekly.com/archive/',
-    'ruby' => 'http://rubyweekly.com/archive/'
+    'ruby' => 'http://rubyweekly.com/archive/',
+    'postgres' => 'http://postgresweekly.com/archive/'
   }
 
   # Returns an instance for a given type.
